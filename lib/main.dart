@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
-import './widgets/new_transaction.dart';
-import './widgets/transaction_list.dart';
+import './widgets/user_transaction.dart';
 
 void main() => runApp(MyApp());
 
@@ -26,12 +24,15 @@ class MyHomePage extends StatelessWidget {
         // mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Card(
-            child: Container(width: double.infinity, child: Text('CHART!')),
-            elevation: 5,
+          Container(
+            width: double.infinity,
+            child: Card(
+              color: Colors.blue,
+              child: Text('CHART!'),
+              elevation: 5,
+            ),
           ),
-          NewTransaction(),
-          TransactionList(),
+          UserTransactions(),
         ],
       ),
     );
